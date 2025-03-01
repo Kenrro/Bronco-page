@@ -39,12 +39,9 @@ body {
     /* Grid */
     display: grid;
 
-}
-
+}/* Header */
 header {
     min-height: 600px;
-
-
     /* Backgroud */
     background-image: url(../IMG/Fondo-header.jpg);
     background-position: center;
@@ -52,7 +49,6 @@ header {
     background-size: cover;
     mask-image: linear-gradient( #000
     #fff,  transparent);
-    
 }
 #wrap-header-content {
     height: 100%;
@@ -82,7 +78,6 @@ header {
     min-width: 150px;
     transition-duration: 0.5s;
     transition-property: transform;
-
     /* Backgroud */
     background: linear-gradient(var(--verde-900), var(--verde-700));
 }
@@ -103,6 +98,7 @@ header {
     font-weight: bold;
     font-size: 0.8em;
 }
+/* Fin header */
 .content {
     background: var(--monza-950);
     background: linear-gradient(var(--monza-950), var(--verde-900));
@@ -118,13 +114,45 @@ header {
     min-width: 300px;
     
 }
-
+/* Información principal */
 #wrap-texto-content {
     width: 70%;
 }
+#wrap-texto-content * {
+    margin-bottom: 20px;
+}
 #wrap-encabezado-texto-content h3{
     text-align: center;
+    text-shadow: 1px 0px 0px white;
 }
+#wrap-texto-content #wrap-informacion-desplegable {
+}
+#wrap-texto-content .wrap-informacion-desplegable .boton-desplegable-informacion{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20%;
+    border-top: 1px solid #123;
+    padding: 1%;
+    cursor: pointer;
+    font-weight: bold;
+}
+#wrap-texto-content .wrap-informacion-desplegable .boton-desplegable-informacion *{
+    margin: 0;
+}
+#wrap-texto-content .wrap-informacion-desplegable .boton-desplegable-informacion:hover{
+    background-color: #112121;
+}
+#wrap-texto-content .wrap-informacion-desplegable .boton-desplegable-informacion img{
+    width: 1em;
+}
+#wrap-texto-content .wrap-informacion-desplegable .contenido-desplegable {
+    transition:  5s;
+    display: none;
+    height: 0;
+}
+/* final */
+/*  Sobre mi */
 #wrap-sobre-mi, #wrap-repertorio {
     width: 70%;
     box-shadow: 0 0 50px var(--monza-900);
@@ -145,18 +173,20 @@ header {
 .wrap-sobre-mi-caja img {
     width: 100%;
     height: 100%;
-    
+    mask-image: linear-gradient(to right, #000, #000, transparent);
 }
 .sobre-mi-img {
     display: flex;
     overflow: hidden;
 }
 .sobre-mi-texto {
-    padding: 10px;
+    align-content: center;
 }
 .sobre-mi-texto p {
-    font-size: 1em;
+    padding: 1.5em;
+    font-size: 0.9em;
 }
+/* FIn sobre mi */
 #wrap-servicios {
     width: 70%;
     display: flex;
@@ -174,7 +204,7 @@ header {
     text-align: left;
     text-indent: 15%;
     position: relative;
-    background: linear-gradient(to right, var(--monza-200), var(--monza-500), #000);
+    background: linear-gradient(to right, var(--monza-200), var(--monza-500), #111);
     box-shadow: -20px 0 50px var(--monza-500);
     border-radius: 5px;
 }
@@ -245,13 +275,19 @@ header {
     justify-content: center;
 }
 /* Video */
-#wrap-instagram video{
-    width: 70%;
-    position: relative;
+#wrap-instagram {
+    display: flex;
+
 }
-
-
-
+#wrap-instagram video{
+    width: 50%;
+    position: relative;
+    box-shadow: 0 0 50px black;
+    border-radius: 10px;
+}
+#wrap-instagram #wrap-texto-instagram{
+    padding: 1em
+}
 
 footer {
     background: linear-gradient(to bottom, var(--verde-900), #000);
