@@ -170,15 +170,58 @@ header {
     min-height: 400px;
     flex: 1;
 }
-.wrap-sobre-mi-caja img {
-    width: 100%;
-    height: 100%;
-    mask-image: linear-gradient(to right, #000, #000, transparent);
-}
+
 .sobre-mi-img {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contenedor-imagenes {
+    width: 100%;
+    height: 100%;
+    position: relative;  /* Asegura que las imágenes absolutas se posicionen dentro */
     overflow: hidden;
 }
+
+/* Estilos para las imágenes */
+.contenedor-imagenes img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 1s ease-in-out;  /* Transición suave para movimiento y opacidad */
+}
+
+/* Imagen activa visible y posicionada */
+.img-inactiva {
+    left: -100%;
+    opacity: 0;
+}
+.img-activa {
+    left: 0px;               /* Trae la imagen activa a la vista */
+    opacity: 1;            /* La hace visible */
+    background-color: #000;
+
+    /* Animación */
+    animation-name: arrastrar;
+    animation-duration: 1s;
+    transition: opacity, position;
+
+
+}
+@keyframes arrastrar {
+    from{
+        opacity: 0;
+        left: 100%;
+    }
+    to{
+        left: 0%;
+        opacity: 1;
+    }
+}
+
 .sobre-mi-texto {
     align-content: center;
 }
@@ -186,6 +229,7 @@ header {
     padding: 1.5em;
     font-size: 0.9em;
 }
+
 /* FIn sobre mi */
 #wrap-servicios {
     width: 70%;
