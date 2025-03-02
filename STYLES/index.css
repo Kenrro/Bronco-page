@@ -24,6 +24,8 @@
     --verde-800: #006341;
     --verde-900: #015338;
     --verde-950: #002f20;
+
+    --Blanco-300: #fbf4f4;
   }
 
 html * {
@@ -101,13 +103,27 @@ header {
 /* Fin header */
 .content {
     background: var(--monza-950);
-    background: linear-gradient(var(--monza-950), var(--verde-900));
+    background: linear-gradient(120deg,var(--monza-950), var(--monza-700), var(--verde-700), var(--verde-900));
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5%;
     gap: 40px;
+    position: relative;
+    animation: fondo 10s ease-in-out infinite;
+    background-size: 200%;
+}
+@keyframes fondo {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 .content > * {
     max-width: 700px;
@@ -156,11 +172,11 @@ header {
 #wrap-sobre-mi, #wrap-repertorio {
     width: 70%;
     box-shadow: 0 0 50px var(--monza-900);
-    border-radius: 5px;
+    border-radius: 20px;
+    overflow: hidden;
 
     /* Backgroud */
-    background-color: var(--verde-600);
-    background: linear-gradient(var(--verde-950),var(--verde-800));
+    
     /* flex */
     display: flex;
     flex-wrap: wrap;
@@ -176,6 +192,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
+    background: none;
 }
 
 .contenedor-imagenes {
@@ -192,7 +209,7 @@ header {
     position: absolute;
     top: 0;
     transition: all 1s ease-in-out;  /* Transición suave para movimiento y opacidad */
-}
+    }
 
 /* Imagen activa visible y posicionada */
 .img-inactiva {
@@ -224,10 +241,28 @@ header {
 
 .sobre-mi-texto {
     align-content: center;
+    padding: 2em;
+    background-color: var(--verde-600);
+    background: var(--Blanco-300);
+}
+.sobre-mi-texto h3 {
+    color: #8e8787;
+    position: relative;
+    margin-bottom: 1em;
+    
+}
+.sobre-mi-texto h3::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: #05c479;
 }
 .sobre-mi-texto p {
-    padding: 1.5em;
     font-size: 0.9em;
+    color: #323232;
 }
 
 /* FIn sobre mi */
