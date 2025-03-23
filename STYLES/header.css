@@ -1,0 +1,102 @@
+:root {
+    --monza-50: #fff1f2;
+    --monza-100: #ffe0e3;
+    --monza-200: #ffc6cc;
+    --monza-300: #ff9ea8;
+    --monza-400: #ff6777;
+    --monza-500: #fc374c;
+    --monza-600: #ea182e;
+    --monza-700: #ce1125;
+    --monza-800: #a21221;
+    --monza-900: #861622;
+    --monza-950: #49060d;
+
+    /* Verde */
+
+    --verde-50: #ebfef4;
+    --verde-100: #cefde2;
+    --verde-200: #a2f8cb;
+    --verde-300: #66efb0;
+    --verde-400: #29de91;
+    --verde-500: #05c479;
+    --verde-600: #00a063;
+    --verde-700: #008052;
+    --verde-800: #006341;
+    --verde-900: #015338;
+    --verde-950: #002f20;
+
+    --Blanco-300: #fbf4f4;
+  }
+
+html * {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--monza-100);
+    box-sizing: border-box;
+}
+body {
+    
+    /* Grid */
+    display: grid;
+
+}/* Header */
+header {
+    min-height: 600px;
+    /* Backgroud */
+    background-image: url(../IMG/Fondo-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mask-image: linear-gradient( #000
+    #fff,  transparent);
+}
+#wrap-header-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* Backgroud */
+    background: linear-gradient(to left, #000, transparent);
+
+}
+#wrap-header-content-text {
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+    color: #fff;
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    font-size: 70%;
+}
+.cta {
+    padding: 2%;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    box-sizing: content-box;
+    max-width: 200px;
+    min-width: 150px;
+    transition-duration: 0.5s;
+    transition-property: transform;
+    /* Backgroud */
+    background: linear-gradient(var(--verde-900), var(--verde-700));
+}
+.cta:hover {
+    transform: scale(1.1);
+    background: linear-gradient(var(--verde-500), var(--verde-300));
+    box-shadow: 0 0 10px var(--verde-400);
+
+    
+}
+.cta:hover .wrap-cta span{
+    color: var(--monza-950);
+    width: 100%;
+    height: 100%;
+} 
+.cta .wrap-cta span{
+    color: var(--monza-100);
+    font-weight: bold;
+    font-size: 0.8em;
+}
+/* Fin header */
