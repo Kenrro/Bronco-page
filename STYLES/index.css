@@ -26,6 +26,7 @@
     --verde-950: #002f20;
 
     --Blanco-300: #fbf4f4;
+    --Amarillo-100: rgb(102, 255, 0);
   }
 
 
@@ -37,6 +38,7 @@
     flex-direction: column;
     align-items: center;
     padding: 5%;
+    padding-bottom: 0;
     gap: 40px;
     position: relative;
     animation: fondo 10s ease-in-out infinite;
@@ -66,6 +68,10 @@
     margin-bottom: 20px;
 }
 #wrap-encabezado-texto-content h3{
+    display: block;
+    width: 60%;
+    margin: auto;
+    position: relative;
     text-align: center;
     text-shadow: 1px 0px 0px white;
 }
@@ -210,7 +216,7 @@
 #wrap-servicios h3{
     position: relative;
 }
-#wrap-servicios h3::after {
+.titulo-cajas::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -337,19 +343,129 @@
     gap: 10px;
     justify-content: center;
 }
+#wrap-segunda-seccion {
+    min-width: 100vw;
+    background-color: var(--monza-400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    position: relative;
+    margin-top: 5%;
+}
+#wrap-segunda-seccion > *:not(:first-child){
+    max-width: 600px;
+    min-width: 300px;
+}
+.custom-shape-divider-top-1742757867 {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1742757867 svg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px);
+    height: 107px;
+}
+
+.custom-shape-divider-top-1742757867 .shape-fill {
+    fill: var(--monza-400)
+}
 /* Video */
+#wrap-redes-sociales {
+    width: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#wrap-redes-sociales h3{
+    position: relative;
+    display: block;
+}
 #wrap-instagram {
     display: flex;
-
+    border: 1px solid white;
+    background-color: var(--Blanco-300);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 50px #000;
 }
+#wrap-instagram #icono-instagram{
+    background-image: url(../IMG/instagram-icon.png);
+    background-position: center;
+    background-size: 70%;
+    box-shadow: 0 0 20px #000;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: var(--monza-100);
+    animation: resaltarIcono;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+#wrap-instagram::before{
+    content: "Siguenos";
+    position: absolute;
+    top: -5px;
+    left: -25px;
+    background-color: #000;
+    z-index: 5;
+    color: var(--Amarillo-100);
+    padding: 5px;
+    transform: rotate(-20deg);
+    
+}
+@keyframes resaltarIcono {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    100%{ 
+        transform: scale(1);
+    }
+}
+
 #wrap-instagram video{
     width: 50%;
     position: relative;
     box-shadow: 0 0 50px black;
-    border-radius: 10px;
+    border-radius: 0 0 0 5px;
+    background-color: #000;
 }
 #wrap-instagram #wrap-texto-instagram{
-    padding: 1em
+    font-size: 1em;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    word-wrap: break-word;
+    
+}
+#wrap-instagram #wrap-texto-instagram p{
+    color: #9602f8;
+    text-align: right;
+}
+#wrap-instagram #wrap-texto-instagram p span{
+    color: var(--monza-600);
 }
 
 footer {
