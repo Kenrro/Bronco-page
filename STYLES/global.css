@@ -1,0 +1,68 @@
+:root {
+    --monza-50: #fff1f2;
+    --monza-100: #ffe0e3;
+    --monza-200: #ffc6cc;
+    --monza-300: #ff9ea8;
+    --monza-400: #ff6777;
+    --monza-500: #fc374c;
+    --monza-600: #ea182e;
+    --monza-700: #ce1125;
+    --monza-800: #a21221;
+    --monza-900: #861622;
+    --monza-950: #49060d;
+
+    /* Verde */
+
+    --verde-50: #ebfef4;
+    --verde-100: #cefde2;
+    --verde-200: #a2f8cb;
+    --verde-300: #66efb0;
+    --verde-400: #29de91;
+    --verde-500: #05c479;
+    --verde-600: #00a063;
+    --verde-700: #008052;
+    --verde-800: #006341;
+    --verde-900: #015338;
+    --verde-950: #002f20;
+
+    --Blanco-300: #fbf4f4;
+
+    --Amarillo-100: rgb(102, 255, 0);
+}
+
+.enfasis-bronco {
+    font-weight: bold;
+    color: var(--verde-500) ;
+    position: relative;
+    display: inline-block;
+}
+.enfasis-bronco::after{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 95%;
+  background-color: var(--Amarillo-100);
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  /* Animación */
+  animation: lineaMovimiento;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes lineaMovimiento {
+  0% {
+    width: 100%;
+  }
+  50%{
+    width: 0%;
+  }
+  55%{
+    background-color: transparent;
+  }
+  100%{
+    width: 100%;
+  }
+}

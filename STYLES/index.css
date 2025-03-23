@@ -262,16 +262,37 @@
 }
 /* Repertorio */
 #wrap-repertorio {
-    width: 70%;
+    position: relative;
+    overflow: visible;
+}
+#wrap-repertorio::before {
+    content: "Repertorio";
+    position: absolute;
+    transform: rotate(-20deg);
+    left: -25px;
+    top: -10px;
+    padding: 10px;
+    z-index: 2;
+    color: rgb(102, 255, 0);
+    text-shadow: 0 0 50px px black;
+    font-weight: bold;
+    background-color: #000;
+}
+#wrap-temas {
+    width: 100%;
     overflow: auto;
     max-height: 95vh;
     background-color: #112121;
     display: flex;
     flex-wrap: wrap;
     gap: 1.1em;
-    padding: 2em;
+    padding: 1.5em;
     justify-content: center;
+    border: 5px  var(--monza-100);
+    border-style: double;
+    position: relative;
 }
+
 #wrap-repertorio .tema{
     flex: 1;
     max-width: 250px;
@@ -313,6 +334,7 @@
     width: 50%;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
 }
 /* Video */
