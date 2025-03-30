@@ -345,7 +345,7 @@
 }
 #wrap-segunda-seccion {
     min-width: 100vw;
-    background-color: var(--monza-400);
+    background-color: var(--monza-500);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -374,7 +374,7 @@
     }
 
     .custom-shape-divider-top-1742757867 .shape-fill {
-        fill: var(--monza-400)
+        fill: var(--monza-500)
     }
 /* Video */
 #wrap-redes-sociales {
@@ -393,7 +393,8 @@
         background-color: var(--Blanco-300);
         border-radius: 10px;
         position: relative;
-        box-shadow: 0 0 50px #000;
+        box-shadow: 0 0 20px var(--Blanco-300);
+        border: 1px solid var(--monza-600);
     }
         #wrap-instagram #icono-instagram{
             background-image: url(../IMG/instagram-icon.png);
@@ -477,6 +478,7 @@
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: 0 0 20px var(--verde-300);
 }
     #wrap-telefono #logo-whatsapp {
         max-width: 3em;
@@ -491,7 +493,76 @@
     #wrap-telefono :nth-child(2) {
         width: 100%;
     }
-   
+#wrap-form {
+    margin-top: 20px;
+    display: flex;
+    overflow: hidden;
+    background: #000;
+    border-left: 5px solid var(--verde-400);
+    box-shadow: 0 0 20px var(--Blanco-300);
+}
+
+    #wrap-form > * {
+        width: 50%;
+        
+    }
+    #wrap-form #wrap-img {
+        background: #000;
+        transform: skew(-6deg);
+        overflow: hidden;
+        height: 100%;
+        z-index: 5;
+    }
+    #wrap-form #wrap-img img {
+        width: 100%;
+        transform: skew(6deg);
+    }
+    #wrap-form form {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+        position: relative;
+        background: var(--monza-100);
+    }
+        #wrap-form form legend {
+            color: var(--monza-600);
+        }
+        #wrap-form form label {
+            margin-top: 1em;
+            color: var(--monza-700);
+        }
+        #wrap-form form input {
+            border: none;
+            background-color: var(--verde-200);
+            color: var(--monza-500);
+            padding: 1px;
+            
+
+        }
+        #wrap-form form button {
+            max-width: 30%;
+            border-radius: 10px;
+            padding: 5px;
+            color: var(--monza-200);
+            border: none;
+            background: var(--monza-700);
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+        #wrap-form form button:hover{
+            box-shadow: 0 0 10px var(--monza-700);
+            background-color: var(--verde-400);
+            color: var(--monza-700);
+        }
+
+
 footer {
     background: linear-gradient(to bottom, var(--verde-900), #000);
     height: 300px;
