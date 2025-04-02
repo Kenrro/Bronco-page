@@ -1,0 +1,14 @@
+footer {
+    background: #222;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 20%;
+    padding: 1em;
+    
+}
+footer span {
+    font-size: 0.8em;
+}

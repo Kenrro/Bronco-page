@@ -563,13 +563,5 @@
         }
 
 
-footer {
-    background: linear-gradient(to bottom, var(--verde-900), #000);
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    gap: 20%;
-}
+
 
