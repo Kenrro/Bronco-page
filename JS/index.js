@@ -3,17 +3,16 @@ const cajas = document.querySelectorAll(".boton-desplegable-informacion");
 cajas.forEach(caja =>{
     caja.addEventListener('click', function() {
         const hermana = this.nextElementSibling;
-        hermana.style.transition = "opacity 0.5s, height 0.5s";  // 0.5s de duración
         const hijo = this.firstElementChild;
-        if(hermana.style.display != "block"){
-            hermana.style.display = "block";   // Primero la mostramos
-            hermana.style.height = "auto";     
+        if(hermana.classList.contains("plegado")){
+            hermana.classList.add("desplegado");
+            hermana.classList.remove("plegado");
             hijo.style.transform = "rotate(90deg)";     
 
         }
         else{
-            hermana.style.display = "none"; // Luego la oculta
-            hermana.style.height = "0";    
+            hermana.classList.add("plegado");
+            hermana.classList.remove("desplegado");   
             hijo.style.transform = "rotate(0)"; 
         }
 
